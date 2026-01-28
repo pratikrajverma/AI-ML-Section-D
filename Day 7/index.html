@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            border: 2px solid black;
+            height: 200px;
+            width: 400px;
+            padding: 20px;
+        }
+
+        #displayBox{
+            border: 2px solid black;
+            height: 60px;
+            font-size: 30px;
+        }
+
+
+        #buttonBox{
+            /* border: 2px solid black; */
+            
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <p id="displayBox">0</p> 
+            
+        <div id="buttonBox">
+        <button id="Dec">-</button>
+        <button id="reset">Reset</button>
+        <button id="Inc">+</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
