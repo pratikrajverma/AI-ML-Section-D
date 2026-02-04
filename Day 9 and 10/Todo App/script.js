@@ -18,30 +18,55 @@ function createList() {
         list.append(eachList)
         eachList.setAttribute('class', 'eachList')
     })
+
+    inputBox.value = ''
 }
 
+
+let editState = null
+
 addBtn.addEventListener('click', () => {
-    if (inputBox.value !== '') {
+    if (inputBox.value !== '' && editState === null) {
+
         listData.push({
             listValue: inputBox.value
         })
-        createList()
+       
         inputBox.value = ''
         // console.log(listData)   
+    }else{
+
+        listData[editState].listValue = inputBox.value
+        editState = null
+        addBtn.textContent = 'Add'
+
+
     }
+
+     createList()
 })
 
 
 function DeleteHandler(i) {
     listData.splice(i, 1)
     createList()
+
 }
 
 function EditHandler(i){
-    console.log(i)
+
+    inputBox.value = listData[i].listValue
+    addBtn.textContent = 'Update'
+    editState = i
+    // listData[i].listValue = 
+
+
 }
+
 
 // let arr = [1,2,3,4]
 
 // arr.splice(1,1)
 // console.log(arr)
+
+let x= prompt('enter')
