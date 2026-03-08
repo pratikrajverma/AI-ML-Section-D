@@ -53,7 +53,7 @@ addBtn.addEventListener('click',()=>{
         history.append(p)
     });
 
-//    showData()
+
  
 })
 
