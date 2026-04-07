@@ -11,10 +11,8 @@
     name:'Nandan',
     marks:10
   },
-  {
-    name:'Pushkar',
-    marks:20
-  }
+ 
+   
  ]
 
  export default report
